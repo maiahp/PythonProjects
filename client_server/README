@@ -1,0 +1,21 @@
+Maiah Pardo
+
+A client-server application where the server can respond to a number of clients.
+
+Server tasks:
+The server accepts 2 command line arguments: the max number of clients that it can respond to, and the number of seconds for the timeout timer.
+Then the server waits for request for up to the max number of clients:
+For each request, the server creates a thread to respond to the client. 
+If the number of clients < the max number of clients, then the extra listening socket times out when the number of seconds on the timer is up.
+For each client, the server accepts a command to produce an output data set with a numpy function.
+
+Client tasks:
+Prompt the user with a menu to run 2 math functions: power function and sine function, or to quit
+If the user chooses the power function, prompt for the exponent, min x value, and max x value
+If the user chooses the sine function, prompt for the frequency
+Send all user input to the server
+Receives a data set from the server
+Plot the data set with matplotlib
+When the user closes the plot, loop back to prompt the user again
+End with the user chooses to quit.
+
